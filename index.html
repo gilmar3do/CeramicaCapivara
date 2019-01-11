@@ -4,7 +4,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html>
+<html ng-app="CeramicaCapivara">
 	<head>
 		<title>Phase Shift by TEMPLATED</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -17,6 +17,11 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+                <script src="js/angular.js"></script>
+                <script src="js/angular-route.js"></script>
+                <script src="app/app.js"></script>
+                <script src="app/rotas.js"></script>
+                <script src="app/CeramicaController.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -28,22 +33,9 @@
 
 		<!-- Wrapper -->
 			<div class="wrapper style1">
-
-				<!-- Header -->
-					<div id="header" class="skel-panels-fixed">
-						<div id="logo">
-							<h1><a href="index.html">Cerâmica Serra da Capivara</a></h1>
-							<span class="tag">Piauí - Brasil</span>
-						</div>
-						<nav id="nav">
-							<ul>
-								<li class="active"><a href="index.html">Produtos</a></li>
-								<li><a href="left-sidebar.html">Quem Somos</a></li>
-								<li><a href="right-sidebar.html">Cerâmica Serra da Capivara</a></li>
-								<li><a href="no-sidebar.html">Serra da Capivara</a></li>
-							</ul>
-						</nav>
-					</div>
+                            <!-- Header-->    
+                            <div ng-include="'componentes/header_bar.html'"></div>
+				 
 
 				<!-- Banner -->
 					<div id="banner" class="container">
@@ -53,45 +45,7 @@
 						</section>
 					</div>
 
-				<!-- Extra -->
-					<div id="extra">
-						<div class="container">
-							<div class="row no-collapse-1">
-								<section class="4u thumbnails"> <a href="images/produtos/Abajour-CSA002.jpg" class="image featured"><img src="images/produtos/Abajour-CSA002.jpg" alt=""></a>
-									<div class="box">
-                                                                            <p>Descrição: Abajur<br/>Código: CSA002</p>
-										<a href="images/produtos/Abajour-CSA002.jpg" class="button">Detalhes</a> </div>
-								</section>
-								<section class="4u thumbnails"> <a href="images/produtos/AÇUCAREIRO-4-1024x679.jpg" class="image featured"><img src="images/produtos/AÇUCAREIRO-4-1024x679.jpg" alt=""></a>
-									<div class="box">
-										<p>Descrição: Açucareiro G<br/>Código: CSA001</p>
-										<a href="images/produtos/AÇUCAREIRO-4-1024x679.jpg" class="button">Detalhes</a> </div>
-								</section>
-								<section class="4u thumbnails"> <a href="images/produtos/AÇUCAREIRO-6-1024x679.jpg" class="image featured"><img src="images/produtos/AÇUCAREIRO-6-1024x679.jpg" alt=""></a>
-									<div class="box">
-										<p>Descrição: Açucareiro P<br/>Código: CSA003</p>
-										<a href="images/produtos/AÇUCAREIRO-6-1024x679.jpg" class="button">Detalhes</a> </div>
-								</section>
-							</div>
-							<div class="row no-collapse-1">
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""></a>
-									<div class="box">
-										<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
-										<a href="#" class="button">Read More</a> </div>
-								</section>
-							</div>
-						</div>
-					</div>
+				<div class="container" ng-view></div>
 
 				<!-- Main -->
 					<div id="main">
